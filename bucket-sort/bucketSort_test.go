@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestBubbleSort(t *testing.T) {
+func TestBucketSort(t *testing.T) {
 	cases := []struct {
 		in   []int
 		want []int
