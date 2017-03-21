@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestMergesort(t *testing.T) {
+func TestMergeSort(t *testing.T) {
 	cases := []struct {
 		in   []int
 		want []int
@@ -17,7 +17,7 @@ func TestMergesort(t *testing.T) {
 			[]int{100, 3382, 4837, 5039, 6039}},
 	}
 	for _, c := range cases {
-		got := Mergesort(c.in)
+		got := MergeSort(c.in)
 		if !reflect.DeepEqual(got, c.want) {
 			t.Errorf("MergeSort(%v) == %v, want %v", c.in, got, c.want)
 		}

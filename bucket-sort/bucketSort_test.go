@@ -19,7 +19,7 @@ func TestBucketSort(t *testing.T) {
 	for _, c := range cases {
 		got := BucketSort(c.in)
 		if !reflect.DeepEqual(got, c.want) {
-			t.Errorf("BubbleSort(%v) == %v, want %v", c.in, got, c.want)
+			t.Errorf("BucketSort(%v) == %v, want %v", c.in, got, c.want)
 		}
 	}
 }

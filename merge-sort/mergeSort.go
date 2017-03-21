@@ -29,7 +29,7 @@ import (
 // source : https://en.wikipedia.org/wiki/Merge_sort
 
 // MergeSort takes a slice and sorts them using the above algo
-func Mergesort(arr []int) []int {
+func MergeSort(arr []int) []int {
 	if len(arr) <= 1 {
 		return arr
 	}
@@ -39,10 +39,10 @@ func Mergesort(arr []int) []int {
 
 	// make copies for the left and right side
 	left = make([]int, len(arr[:mid]))
-	copy(left, Mergesort(arr[:mid])) // copy left side recursively
+	copy(left, MergeSort(arr[:mid])) // copy left side recursively
 
 	right = make([]int, len(arr[mid:]))
-	copy(right, Mergesort(arr[mid:])) // copy right side recursively
+	copy(right, MergeSort(arr[mid:])) // copy right side recursively
 
 	var i int
 	var j int
@@ -93,7 +93,7 @@ func main() {
 	fmt.Printf("Before: %v\n", arr)
 	b := time.Now()
 	// sorting
-	result := Mergesort(slice)
+	result := MergeSort(slice)
 
 	// output after
 	fmt.Printf("After: %v\n", result)
